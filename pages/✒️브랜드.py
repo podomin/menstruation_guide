@@ -11,16 +11,11 @@ st.warning("올리브영의 '생리대' 범주에서 인기순 top 20 제품과 
     모든 제품의 리뷰 데이터를 분석한 자료임을 참고해주세요")
 
 
-st.markdown("### 생리용품 브랜드 별 Boxplot 시각화")
-st.markdown("➡️ Boxplot은 데이터들의 통계 정보, 분포, 이상치를 시각적으로 보여주는 시각화 차트입니다.")
-if st.toggle("### Boxplot 보기"):
-    image = Image.open('./data/brand_box.png')
-    st.image(image, width=800)
-    st.markdown(" (해당 데이터는 생리대+탐폰 리뷰의 만족도, 흠수도, 촉감 점수의 평균을 기준으로 측정한 그래프입니다 )")
-    st.markdown("💡**y축인 'Average', 만족도 평균 점수 와 x축 브랜드를 통해\
-        브랜드 별로 만족도 평균 점수의 분포도와 이상치(검정색 다이아몬드형 점)를 한 눈에 확인해보세요.** ")
+st.markdown("### 생리용품 브랜드 17가지")
 
-
+st.write("")
+st.markdown("------------------")
+st.write("")
 
 cols = st.columns(2)
 with cols[0]:
