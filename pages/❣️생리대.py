@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-#st.set_page_config(layout="centered")
+st.set_page_config(layout="wide")
   
 st.title("생리대 (패드형 생리용품)")
 
