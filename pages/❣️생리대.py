@@ -35,19 +35,19 @@ st.markdown(" 생리대 구매 시 어떤 걸 가장 중요하게 생각하시�
 
 cols = st.columns(3)
 with cols[0]:
-    with st.expander(label=f"**1. 이너시아**"):
+    with st.expander(label=f"**1. 흡수**"):
         st.image('data/inersia.png',  use_column_width=True)
         st.markdown(" #### 흡수 💘 이너시아 ")
         st.write(" 리뷰 분석 결과, '흡수' 키워드 등장 비율이 가장 높았던 브랜드는 바로 이너시아였습니다! ")
         
 with cols[1]:
-    with st.expander(label=f"**2. 아임오**"):
+    with st.expander(label=f"**2. 재구매**"):
         st.image('data/imo.png',  use_column_width=True)
         st.markdown(" #### 재구매 💘 아임오 ")
         st.write(" 리뷰 분석 결과, '재구매' 키워드 등장 비율이 가장 높았던 브랜드는 바로 아임오아였습니다! ")
         
 with cols[2]:
-    with st.expander(label=f"**3. 쏘피**"):
+    with st.expander(label=f"**3. 가성비**"):
         st.image('data/sofy.png',  use_column_width=True)
         st.markdown(" #### 가성비 💘 쏘피 ")
         st.write(" 리뷰 분석 결과, '가성비' 키워드 등장 비율이 가장 높았던 브랜드는 바로 쏘피였습니다! ")
@@ -61,7 +61,7 @@ st.markdown("➡️ 올리브영 입점 브랜드 17개의 리뷰 웹클로링, 
 if st.toggle("🧐 그래프 보기"):
     image = Image.open('./data/pad_p.png')
     st.image(image, use_column_width=True)
-    st.markdown("위 그래프는 브랜드 별 생리대 리뷰에서 로 생리용품과 관련된 키워드의 빈도수를 시각화한 바그래프입니다.  ")
+    st.markdown("위 그래프는 브랜드 별 생리대 리뷰에서 로 생리대와 관련된 키워드의 빈도수를 시각화한 바그래프입니다.  ")
 
 cols = st.columns(4)
 with cols[0]:
@@ -118,6 +118,15 @@ st.markdown("➡️ 워드클라우드는 자료의 빈도를 시각적으로 �
 if st.toggle("## 🧐 워드클라우드 보기"):
     image = Image.open('./data/pad_wc.png')
     st.image(image, width=700)
+st.markdown("- 위의 시각화 자료를 살펴보면 글자 크기를 기준으로 사용자의 \
+    니즈를 한 눈에 파악할 수 있다. ")
+st.markdown("- 생리대를 구매할 때 가장 중요하게 생각하는 부분은 \
+    ‘부드럽‘고 ‘흡수력‘이 좋아야하며 ‘피부‘에 ‘자극’이 덜한 \
+    제품인 것으로 예상해볼 수 있다. 또한 피부에 닿는 면이 \
+    유기농 순면인 제품을 조금 더 선호하는 것 같고, \
+    생리대가 다른 생활용품에 비해 가격이 있는 편이라 \
+    세일할 때 구매하는 것을 중요하게 생각하는 것으로 보인다.")
+st.markdown("- 생리대에서 가장 많이 등장한 브랜드는 ‘좋은느낌‘과 ‘쏘피’ 이었다.")
 
 
 st.write("")
@@ -173,7 +182,7 @@ st.markdown("### 이너시아 VS 좋은느낌 t-test")
 st.markdown("➡️ t-test는 두 집단 간의 평균 차이가 유의미한지 검증하는 통계 방법입니다.")
 with st.expander(label=f"**루키 브랜드 VS 원조 브랜드**"): 
     st.write("📌 위 박스플롯 그래프 속 이너시아의 높은 평균 점수가 사실인지 확인하기 위해 t-test를 진행해보겠습니다.\
-        좋은 느낌 평균 점수와 비교를 해볼 건데 좋은느낌을 비교 대상으로 선택한 이유는 최근에 등장한 이너시아와 달리 역사가 오래된 생리용품 브랜드이고 리뷰 수 차이가 \
+        좋은느낌 평균 점수와 비교를 해볼 건데 좋은느낌을 비교 대상으로 선택한 이유는 최근에 등장한 이너시아와 달리 역사가 오래된 생리용품 브랜드이고 리뷰 수 차이가 \
         가장 높았던 브랜드였기 때문입니다.")
     st.markdown("< t-test 결과 확인하기 >")
     st.image("./data/inersia_ttest.png")
@@ -193,9 +202,10 @@ with st.expander(label=f"**국내 브랜드 VS 해외 브랜드**"):
         통계적으로 유의미한 차이가 있을지 t-test를 통해 살펴보겠습니다. ")
     st.markdown("< t-test 결과 확인하기 >")
     st.image("./data/pad_ttest.png")
-    st.write("위 이미지 속 p-value의 가장 마지막에 있는 값이 유의수준 0.05보다 작기 때문에\
-        귀무가설(H0)을 기각하고 대립가설(H1)을 채택할 수 있습니다.\
-        즉, 라엘 생리대 만족도 평균 점수가 유기농본 생리대 만족도 평균 점수보다 통계적으로도 높다라고 할 수 있습니다.")
-    st.markdown(" ##### 결론 : 해외 브랜드인 라엘의 평균 점수가 국내 브랜드인 유기농본의 평균 점수보다 높은 것은 사실이다.")
+    st.write("위 이미지 속 p-value의 가장 마지막에 있는 값이 0.465~로 유의수준 0.05보다 작기 때문에\
+        귀무가설(H0)을 기각할 수 없습니다.\
+        즉, 라엘 생리대 리뷰 평균과 유기농본 생리대 리뷰 \
+        평균이 통계적으로도 같다고 할 수 있습니다.")
+    st.markdown(" ##### 결론 : 해외 브랜드인 라엘의 평균 점수와 국내 브랜드인 유기농본의 평균 점수는 같다.")
 
 
