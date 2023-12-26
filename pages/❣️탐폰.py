@@ -26,28 +26,28 @@ st.warning("해당 데이터는 2023년 12월 20일 기준으로 수집한 데�
 st.write("") 
 
 st.markdown("### 탐폰 키워드 - 브랜드 3대장 🏆")
-st.markdown(" 생리대 구매 시 어떤 걸 가장 중요하게 생각하시나요? \
+st.markdown(" 탐폰 구매 시 어떤 걸 가장 중요하게 생각하시나요? \
     '흡수력'는 탐폰의 가장 필수적인 역할이죠. '재구매' 여부는 다른 소비자가 제품을 구매할 때 큰 영향을 줄 수 있는 키워드죠 \
-    '편하다'는 저희의 통장이 텅장이 되지 않도록 도와주는 키워드이고요.  \
-    그래서 '흡수', '재구매', '가성비' 키워드가 생리대 리뷰 데이터에서 가장 자주 등장했던\
+    '편하다'는 탐폰의 착용 만족도를 알 수 있는 키워드이고요.  \
+    그래서 '흡수력', '재구매', '편하다' 키워드가 탐폰 리뷰 데이터에서 가장 자주 등장했던\
     브랜드를 찾아 소개하려고 합니다.  \
     ")
 
 cols = st.columns(3)
 with cols[0]:
-    with st.expander(label=f"**1. 순수한면**"):
+    with st.expander(label=f"**1. 흡수력**"):
         st.image('data/sunsu.png',  use_column_width=True)
         st.markdown(" #### 흡수력 💘 순수한면 ")
         st.write(" 리뷰 분석 결과, '흡수력' 키워드 등장 비율이 가장 높았던 브랜드는 바로 순수한면입니다! ")
         
 with cols[1]:
-    with st.expander(label=f"**2. 나트라케어**"):
+    with st.expander(label=f"**2. 재구매**"):
         st.image('data/natra.png',  use_column_width=True)
         st.markdown(" #### 재구매 💘 나트라케어 ")
         st.write(" 리뷰 분석 결과, '재구매' 키워드 등장 비율이 가장 높았던 브랜드는 바로 나트라케어였습니다! ")
         
 with cols[2]:
-    with st.expander(label=f"**3. 템포**"):
+    with st.expander(label=f"**3. 편하다**"):
         st.image('data/tempo.png',  use_column_width=True)
         st.markdown(" #### 편하다 💘 템포 ")
         st.write(" 리뷰 분석 결과, '템포' 키워드 등장 비율이 가장 높았던 브랜드는 바로 템포였습니다! ")
@@ -61,13 +61,15 @@ st.markdown("➡️ 올리브영 입점 브랜드 17개의 리뷰 웹클로링, 
 if st.toggle("🧐 그래프 보기"):
     image = Image.open('./data/tampon_p.png')
     st.image(image, use_column_width=True)
-    st.markdown("위 그래프는 브랜드 별 탐폰 리뷰에서 로 탐폰과 관련된 키워드의 빈도수를 시각화한 바그래프입니다.  ")
+    st.markdown("위 그래프는 브랜드 별 탐폰 리뷰에서 탐폰과 관련된 키워드의 빈도수를 시각화한 바그래프입니다.  ")
 
 cols = st.columns(4)
 with cols[0]:
     with st.expander(label=f"**Keyword - '좋다'**"):
         st.write("😍 탐폰 리뷰에서 '좋다' 키워드 빈도수가 가장 높았던 브랜드는... ")
         st.markdown("#### 나트라케어 ")
+        df= pd.DataFrame({'흡수력':[0.799]})
+        st.dataframe(df)
         
     with st.expander(label=f"**Keyword - '흡수력'**"):
         st.write("😍 탐폰 리뷰에서 '흡수력' 키워드 빈도수가 가장 높았던 브랜드는... ")
@@ -78,14 +80,14 @@ with cols[0]:
 with cols[1]:
     with st.expander(label=f"**Keyword - '재구매'**"):
         st.write("😍 탐폰 리뷰에서 '재구매' 키워드 빈도수가 가장 높았던 브랜드는... ")
-        st.markdown("#### 나트라케어 ")
-        df= pd.DataFrame({'재구매':[0.799]})
+        st.markdown("#### 라엘 ")
+        df= pd.DataFrame({'재구매':[0.0988]})
         st.dataframe(df)
         
     with st.expander(label=f"**Keyword - '나쁘다'**"):
         st.write("😭 탐폰 리뷰에서 '나쁘다' 키워드 빈도수가 가장 높았던 브랜드는... ")
         st.markdown("#### 순수한면 ")
-        df= pd.DataFrame({'나쁘다':[0.065]})
+        df= pd.DataFrame({'나쁘다':[0.472]})
         st.dataframe(df)
 
 with cols[2]:      
@@ -97,15 +99,15 @@ with cols[2]:
         
     with st.expander(label=f"**Keyword - '아프다'**"):
         st.write("😭 탐폰 리뷰에서 '아프다' 키워드 빈도수가 가장 높았던 브랜드는... ")
-        st.markdown("#### 순수한면 ")
-        df= pd.DataFrame({'아프다':[0.047]})
+        st.markdown("#### 나트라케어 ")
+        df= pd.DataFrame({'아프다':[0.799]})
         st.dataframe(df)
 
 with cols[3]:
     with st.expander(label=f"**Keyword - '어렵다'**"):
         st.write("😭 탐폰 리뷰에서 '어렵다' 키워드 빈도수가 가장 높았던 브랜드는... ")
         st.markdown("#### 나트라케어 ")
-        df= pd.DataFrame({'어렵다':[0.0798]})
+        df= pd.DataFrame({'어렵다':[0.0799]})
         st.dataframe(df)
         
 
@@ -114,7 +116,13 @@ st.markdown("➡️ 워드클라우드는 자료의 빈도를 시각적으로 �
 if st.toggle("🧐 워드클라우드 보기"):
     image = Image.open('./data/tampon_wc.png')
     st.image(image, width=700) 
-    
+st.markdown("- 위의 시각화 자료를 살펴보면 글자 크기를 기준으로 사용자의 \
+    니즈를 한 눈에 파악할 수 있다. ")
+st.markdown("- 탐폰을 구매할 때 가장 중요하게 생각하는 부분은\
+    '흡수력'이 정도와 '편한'지 '불편'한지에 대한 '느낌'과 '자극'에 대한 여부 \
+    이며 추가적으로 탐폰의 '사이즈'와 '세일'유무도 사용자가 제품을 구매하는데 큰 영향을  \
+    미칠 것이라고 예상해볼 수 있다.")
+st.markdown("- 탐폰에서 가장 많이 등장한 브랜드는 ‘템포‘와 ‘해피문데이’ 이었다.")
 
 st.write("")
 st.markdown("------------------")
@@ -193,4 +201,3 @@ with st.expander(label=f"**국내 브랜드 VS 해외 브랜드**"):
         즉, 해피문데이 탐폰 리뷰의 만족도 평균 점수가 라엘 탐폰 리뷰의 만족도 평균 점수보다 통계적으로도 높다고 볼 수 없습니다.")
     st.markdown(" ##### 결론 : 국내 브랜드인 해피문데이의 평균 점수가 \
         해외 브랜드인 라엘의 평균 점수보다 높은 것은 사실이 아니다.")
-
