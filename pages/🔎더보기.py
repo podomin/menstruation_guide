@@ -22,7 +22,7 @@ with tab_message:
         submitted = st.form_submit_button('전송')
         if submitted and msg_input and radio:
             st.session_state.past.append([radio, msg_input])
-            with open("./data/oliveyoung_opinion.csv", "a", encoding="utf-8") as fw:
+            with open("C:\Users\82108\Desktop\mulcam_code\firstProject\python_mulcam\python_01\data_analytics_camp_8th\project22\data\oliveyoung_opinion.csv", "a", encoding="utf-8") as fw:
                 writer = csv.writer(fa)
                 writer.writerow(st.session_state['past'])
             return st.success("의견 전달하기 성공!")
