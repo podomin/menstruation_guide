@@ -17,7 +17,7 @@ with tab_message:
   
     st.markdown("#### 🙃 가이드북이 유용했나요? 🥺 당신의 의견을 남겨주세요 ")
     with st.form('form', clear_on_submit=True):
-        radio = st.radio(label = '가이드북이 얼마나 도움이 됐다고 생각하시나요?', options = ['예', '보통', '아니오'])
+        radio = st.radio(label = '가이드북이 얼마나 도움이 됐다고 생각하시나요?', options = ['매우', '보통', '별루'])
         st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
         msg_input = st.text_input('메시지 입력 : ', '')
         submitted = st.form_submit_button('전송')
