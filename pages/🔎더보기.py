@@ -23,14 +23,10 @@ with tab_message:
         if submitted and msg_input and radio:
             st.session_state.past.append([radio, msg_input])
             
-            with open("./data/oliveyoung_opinion.csv", "w", encoding="utf-8") as fw:
-                # writer = csv.writer(fw)
-                # writer.writerow(st.session_state['past'])
-                with open("./data/oliveyoung_opinion.csv", "a", encoding="utf-8") as fa:
-                    writer = csv.writer(fw)
-                    writer = csv.writer(fa)
-                    writer.writerow(st.session_state['past'])
-    
+            with open("./data/oliveyoung_opinion.csv", "a", encoding="utf-8") as fw:
+                writer = csv.writer(fa)
+                writer.writerow(st.session_state['past'])
+
 
 with tab_archive:
     st.markdown("#### < 프로젝트 발표자료 >")
