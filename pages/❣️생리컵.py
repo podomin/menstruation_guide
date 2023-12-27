@@ -7,21 +7,20 @@ st.title("생리컵 (삽입형 생리용품)")
 
 cols = st.columns(2)
 with cols[0]:
-    st.error("생리컵: 질내에 삽입해서 사용하는 다회용 생리용품")
-    st.error("다회용이기 때문에 고정 비용 절감 + 환경 보호 가능해요")
-    st.error("4~6시간 주기로 교체 권장하지만 11시간까지 사용 가능해요")
-    st.error("사용 전과 후에 꼭 뜨거운 물로 소독 필수! ")
-    st.error("위생상 2년마다 새 제품으로 교체 필요!")
+    st.error("🩸 생리컵: 질내에 삽입해서 사용하는 다회용 생리용품")
+    st.error("🩸 다회용이기 때문에 고정 비용 절감 + 환경 보호 가능해요")
+    st.error("🩸 4~6시간 주기로 교체 권장하지만 11시간까지 사용 가능해요")
+    st.error("🩸 사용 전과 후에 꼭 뜨거운 물로 소독 필수! ")
+    st.error("🩸 위생상 2년마다 새 제품으로 교체 필요!")
 with cols[1]:
-    st.image("./data/pad_illust.png")   
+    st.image("./data/cup_ill.png")   
 
 st.write("")
 st.markdown("------------------")
 st.write("")
 
-st.warning("해당 데이터는 2023년 12월 20일 기준으로 수집한 데이터이며 올리브영의 \
-    '생리대' 범주에서 인기순 top 20 제품과 '탐폰 & 생리컵' 범주에서의 \
-    모든 제품의 리뷰 데이터를 분석한 자료임을 참고해주세요") 
+st.warning("해당 데이터는 2023년 12월 20일 기준으로 수집한 데이터입니다. 올리브영의 '패드형 생리대' 범주에서 인기순 top 20 제품과 '탐폰 & 생리컵' 범주에서의 \
+        모든 제품의 리뷰 데이터를 분석한 자료임을 참고해주세요") 
 
 st.write("") 
     
@@ -132,39 +131,29 @@ st.markdown(" 해당 데이터는 올리브영 생리컵 리뷰에 포함된 생
 with st.expander(label=f"**측정 기준 자세히 보기**"):
     cols = st.columns(3)
     with cols[0]:
+        st.write("사용성")
+        df= pd.DataFrame({
+                    '쉽다 O': '2점',
+                    '어렵다 O': '1점',
+                    '쉽다 X 어렵다 X': '0점'}, index=['키워드 등장'])
+        st.dataframe(df)
+    
+    with cols[1]:
+        st.write("편의성")
+        df= pd.DataFrame({
+                    '편하다 O': '2점',
+                    '불편하다 O': '1점',
+                    '편하다 X 불편하다 X ': '0점'}, index=['키워드 등장'])
+        st.dataframe(df)
+    
+    with cols[2]:
         st.write("재구매")
         df= pd.DataFrame({
                     'O': '1점',
                     'X': '0점'}, index=['키워드 등장'])
         st.dataframe(df)
         
-    with cols[1]:
-        st.write("쉽다")
-        df= pd.DataFrame({
-                    'O': '2점',
-                    'X': '0점'}, index=['키워드 등장'])
-        st.dataframe(df)
-    
-    with cols[2]:
-        st.write("어렵다")
-        df= pd.DataFrame({
-                    'O': '1점',
-                    'X': '0점'}, index=['키워드 등장'])
-        st.dataframe(df)
-        
-    with cols[0]:
-        st.write("편하다")
-        df= pd.DataFrame({
-                    'O': '2점',
-                    'X': '0점'}, index=['키워드 등장'])
-        st.dataframe(df)
-    
-    with cols[1]:
-        st.write("불편하다")
-        df= pd.DataFrame({
-                    'O': '1점',
-                    'X': '0점'}, index=['키워드 등장'])
-        st.dataframe(df)
+
         
 if st.toggle("### Boxplot 보기"):
     image = Image.open('./data/cup_box.png')
@@ -190,3 +179,5 @@ with st.expander(label=f"**리뷰 평균 점수가 동일한 브랜드 1 VS 리�
     즉, 티읕 생리컵과 라엘 생리컵의 리뷰 평균 점수의 차이는 0이 아닙니다.")
     st.markdown(" ##### 결론 : 박스플롯에서 평균 점수가 동일해 보였던 티읕과 라엘의 생리컵\
         리뷰 평균 점수는 통계적으로 동일하다고 볼 수 없다.")
+
+st.write("")
