@@ -134,7 +134,7 @@ st.write("")
     
 st.markdown("### 브랜드 별 생리대 Boxplot")
 st.markdown("➡️ Boxplot은 데이터들의 통계 정보, 분포, 이상치를 시각적으로 보여주는 시각화 차트입니다.")
-st.markdown(" 해당 데이터는 올리브영 생리대 리뷰에 포함된\
+st.markdown(" ( 해당 데이터는 올리브영 생리대 리뷰에 포함된\
     흡수력, 촉감, 자극 리뷰를 점수화 한 값의 평균을 기준으로 측정한 그래프입니다 )")
 with st.expander(label=f"**측정 기준 자세히 보기**"):
     cols = st.columns(3)
