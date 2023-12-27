@@ -23,8 +23,8 @@ with tab_message:
         submitted = st.form_submit_button('전송')
         if submitted and msg_input and radio:
             st.session_state.past.append([radio, msg_input])
-            with open("./data/oliveyoung_opinion.csv", "w", encoding="utf-8") as fw:
-                writer = csv.writer(fw)
+            with open("./data/oliveyoung_opinion.csv", "a", encoding="utf-8") as fa:
+                writer = csv.writer(fa)
                 writer.writerow(st.session_state['past'])
 
 
