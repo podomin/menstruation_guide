@@ -27,6 +27,7 @@ with tab_message:
                 # writer = csv.writer(fw)
                 # writer.writerow(st.session_state['past'])
                 with open("./data/oliveyoung_opinion.csv", "a", encoding="utf-8") as fa:
+                    writer = csv.writer(fw)
                     writer = csv.writer(fa)
                     writer.writerow(st.session_state['past'])
     
