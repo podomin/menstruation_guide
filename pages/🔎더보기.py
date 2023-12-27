@@ -24,8 +24,8 @@ with tab_message:
             st.session_state.past.append([radio, msg_input])
             
             with open("./data/oliveyoung_opinion.csv", "w", encoding="utf-8") as fw:
-                writer = csv.writer(fw)
-                writer.writerow(st.session_state['past'])
+                # writer = csv.writer(fw)
+                # writer.writerow(st.session_state['past'])
                 with open("./data/oliveyoung_opinion.csv", "a", encoding="utf-8") as fa:
                     writer = csv.writer(fa)
                     writer.writerow(st.session_state['past'])
