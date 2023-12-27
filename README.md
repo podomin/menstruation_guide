@@ -1,3 +1,3 @@
 # 발표자료 링크
-file:///C:/Users/82108/Downloads/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20-%20%EA%B0%84%EB%8B%A8%20EDA%2008f3514d898a43609c8c7b4aa2339a5a.pdf
+
 
