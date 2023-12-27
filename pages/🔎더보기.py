@@ -40,4 +40,3 @@ with tab_archive:
     st.write('''가이드북 스트림릿 소스코드가 궁금하다면 링크 Click! ''')
     st.write('''[깃허브](https://github.com/podomin/menstruation_guide.git) ''', unsafe_allow_html=True)
 
-st.wriite("")
