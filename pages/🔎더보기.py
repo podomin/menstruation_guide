@@ -34,7 +34,7 @@ with tab_message:
 with tab_archive:
     st.markdown("#### < 프로젝트 발표자료 >")
     st.write('''저희 프로젝트 자료를 더 자세히 살펴보고 싶다면 링크 Click! ''')
-    st.write('''[발표자료](https://github.com/andreilevin/HoopsHero/) ''', unsafe_allow_html=True)
+    st.write('''[발표자료](https://github.com/podomin/menstruation_guide.git) ''', unsafe_allow_html=True)
 
     st.markdown("#### < 가이드북 소스코드 >")
     st.write('''가이드북 스트림릿 소스코드가 궁금하다면 링크 Click! ''')
