@@ -25,6 +25,7 @@ with tab_message:
             with open("./data/oliveyoung_opinion.csv", "a", encoding="utf-8") as fw:
                 writer = csv.writer(fa)
                 writer.writerow(st.session_state['past'])
+            return st.success("의견 전달하기 성공!")
 
 
 with tab_archive:
