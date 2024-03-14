@@ -3,7 +3,7 @@ import pandas as pd
 st.set_page_config(layout="centered")
 
 
-st.title("🍄독버섯팀이 말아준다")
+st.title("🍄독버섯이 말아준다")
 st.subheader("🍹독버섯팀이 데이터로 말아주는 생리용품 가이드🍸")
 
 
@@ -12,7 +12,7 @@ st.warning("올리브영의 '패드형 생리대' 범주에서 인기순 top 20 
         모든 제품의 리뷰 데이터를 분석한 자료임을 참고해주세요")
 
 st.markdown("#### ❓ WHAT IS 독버섯?")
-st.markdown(" 독버섯은 데이터분석 학습 과정을 통해 만나 과제를 위해 함께 하게 된 프로젝트성 팀입니다.")
+st.markdown(" 독버섯 팀은 데이터분석 학습 과정을 통해 만나 과제를 위해 함께 하게 된 프로젝트성 팀입니다.")
 
 st.markdown("#### ❓ WHY 생리용품 가이드북?")
 st.markdown("여러분은 매달 생리대를 어떤 기준으로 구매하시나요?")
