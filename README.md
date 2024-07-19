@@ -1,5 +1,5 @@
 ## 멀티캠퍼스 - 데이터 분석 & 서비스 개발 교육 과정
-### 팀프로젝트 01
+### 팀프로젝트 01 (2024.02~2024.03)
 #### 팀명 : 독버섯 (민정윤, 오유정, 안수빈)
 #### 프로젝트 주제 : 2030 1인가구를 위한 살기 좋은 동네 추천하기
 
@@ -10,7 +10,7 @@
 
 사용한 언어: Python
 개발 환경: Windows, Git, Jupyter Lab
-라이브러리: Pandas, Matplotlib, Seaborn, numpy, Scikit-learn,  Requests, wordcloud, streamlit
+사용한 라이브러리: Pandas, Matplotlib, Seaborn, numpy, Scikit-learn,  Requests, wordcloud, streamlit
 사용한 스킬 : #전처리 #크롤링 #DB구축 #Visualization #t-test  #EDA #워드클라우드 #인사이트 #스트림릿 
 
 
